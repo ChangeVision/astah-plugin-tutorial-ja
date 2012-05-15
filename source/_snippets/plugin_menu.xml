@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+  <extension point="com.change_vision.astah.ui.actionSets">
+    <actionSet
+      label="%action_set_label"
+      visible="true"
+      id="com.example.helloworld.actionSet">
+      <menu
+        id="helloworld"
+        label="%menu_group"
+        path="tool/helloworld">
+      </menu>
+      <action
+        label="%menu_label"
+        icon="icons/sample.gif"
+        class="com.example.TemplateAction"
+        tooltip="%menu_tooltip"
+        menubarPath="tool/helloworld/"
+        id="com.example.actions.HelloWorldAction">
+      </action>
+    </actionSet>
+  </extension>
+</plugin>
+

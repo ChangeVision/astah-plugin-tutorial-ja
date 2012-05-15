@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+  <extension point="com.change_vision.astah.ui.actionSets">
+    <actionSet 
+      label="%action_set_label " 
+      visible="true"
+      id="com.example.actions.actionSet1">
+      <menu 
+        label="%sample_menu" 
+        id="sampleMenu" 
+        path="tool/sampleMenu">
+      </menu>
+      <action
+        label="%count_classes" 
+        icon="icons/sample.gif"
+        class="com.example.actions.CountClassAction"
+        tooltip="Count classes" 
+        menubarPath="tool/sampleMenu/"
+        id="com.example.actions.CountClassdAction">
+      </action>
+    </actionSet>
+  </extension>
+</plugin>
