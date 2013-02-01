@@ -11,6 +11,7 @@ package com.example.internal;
 import javax.swing.JFrame;
 
 import com.change_vision.astah.extension.plugin.util.exception.APIException;
+import com.change_vision.jude.api.inf.AstahAPI;
 import com.change_vision.jude.api.inf.editor.BasicModelEditor;
 import com.change_vision.jude.api.inf.editor.ClassDiagramEditor;
 import com.change_vision.jude.api.inf.editor.IDiagramEditorFactory;
@@ -19,7 +20,6 @@ import com.change_vision.jude.api.inf.exception.InvalidEditingException;
 import com.change_vision.jude.api.inf.exception.InvalidUsingException;
 import com.change_vision.jude.api.inf.model.IClassDiagram;
 import com.change_vision.jude.api.inf.project.ProjectAccessor;
-import com.change_vision.jude.api.inf.project.ProjectAccessorFactory;
 import com.change_vision.jude.api.inf.view.IDiagramViewManager;
 import com.change_vision.jude.api.inf.view.IViewManager;
 
@@ -69,7 +69,8 @@ public class AstahAPIUtils {
   public ProjectAccessor getProjectAccessor() {
     ProjectAccessor projectAccessor = null;
     try {
-      projectAccessor = ProjectAccessorFactory.getProjectAccessor();
+      AstahAPI api = AstahAPI.getAstahAPI();
+      projectAccessor = api.getProjectAccessor();
     } catch (ClassNotFoundException e) {
           throw new IllegalStateException(e);
     }

@@ -16,14 +16,14 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
+import com.change_vision.jude.api.inf.AstahAPI;
 import com.change_vision.jude.api.inf.project.ProjectAccessor;
-import com.change_vision.jude.api.inf.project.ProjectAccessorFactory;
 import com.change_vision.jude.api.inf.project.ProjectEvent;
 import com.change_vision.jude.api.inf.project.ProjectEventListener;
 import com.change_vision.jude.api.inf.ui.IPluginExtraTabView;
 import com.change_vision.jude.api.inf.ui.ISelectionListener;
 
-public class HelloWorldView extends JPanel 
+public class HelloWorldView extends JPanel
       implements IPluginExtraTabView, ProjectEventListener {
   public HelloWorldView() {
     initComponents();
@@ -37,7 +37,8 @@ public class HelloWorldView extends JPanel
 
   private void addProjectEventListener() {
   try {
-    ProjectAccessor projectAccessor = ProjectAccessorFactory.getProjectAccessor();
+    AstahAPI api = AstahAPI.getAstahAPI();
+    ProjectAccessor projectAccessor = api.getProjectAccessor();
     projectAccessor.addProjectEventListener(this);
   } catch (ClassNotFoundException e) {
     e.getMessage();
