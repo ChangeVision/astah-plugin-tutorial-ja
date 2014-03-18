@@ -18,7 +18,7 @@ astah*のプラグイン機構は、astah*に自作の機能を追加し、機�
 ==================== ===================================
 OS                    Windows7,Ubuntu Linux 11.10
 Java                  Oracle JDK 7
-astah*                6.6(Professional, UML, Community)
+astah*                6.8(Professional, UML, Community),1.1(SysML)
 Eclipse               3.7.1
 IntelliJ IDEA         11.1
 ==================== ===================================

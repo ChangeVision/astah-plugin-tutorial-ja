@@ -15,14 +15,15 @@ pom.xmlを開き、<properties>タグのastah-versionとastah-editionに指定�
     <astah.edition>all</astah.edition>
   </properties>
 
-osstat-versionには開発に利用したastah*のバージョンを書きましょう。空欄にした場合は、全てのバージョンが動作対象となります。astah-editionに指定するキー名は、下記の表を参照してください。
+astah.versionには開発に利用したastah*のバージョンを書きましょう。空欄にした場合は、全てのバージョンが動作対象となります。astah-editionに指定するキー名は、下記の表を参照してください。
 
-================== =======================
+================== =======================================
 Edition             Value
-================== =======================
-全エディション対応 空欄、またはallか、*
+================== =======================================
+全エディション対応 空欄、またはallか、* (astah.versionは1.1にしてください)
 professional       pro、またはprofessional
 UML                uml、またはUML
+SysML              sysml
 community          com、またはCommunity
 think              think
-================== =======================
+================== =======================================
