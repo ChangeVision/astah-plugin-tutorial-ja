@@ -10,6 +10,10 @@ Hello Worldプラグインを作ってみましょう
 
  > astah-generate-project
 
+astah* SysMLのプラグインプロジェクトを新規作成するには、次のコマンドを入力しましょう。 ::
+
+ > astah-sysml-generate-project
+ 
 続いてgroupId、artifactId、version、パッケージを指定してください。
 
 ==================== ============================================================
