@@ -13,7 +13,7 @@
       <action
         label="%menu_label"
         icon="icons/sample.gif"
-        class="com.example.TemplateAction"
+        class="com.example.actions.HelloWorldAction"
         tooltip="%menu_tooltip"
         menubarPath="tool/helloworld/"
         id="com.example.actions.HelloWorldAction">
