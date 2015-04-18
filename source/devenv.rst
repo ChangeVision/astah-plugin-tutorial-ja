@@ -24,11 +24,6 @@ astah*のプラグインの開発環境を構築しましょう
 
      例: set JAVA_HOME=C:\Program Files (x86)\Java\jdk1.7.0_65
 
- * 環境変数「PATH」に「%JAVA_HOME%\\bin」フォルダを追加する。
-   (Linux/Mac OS Xでは「$JAVA_HOME/bin」) ::
-
-     例: set PATH=%JAVA_HOME%\bin;%PATH%
-
 以上の作業が終了したら、次のコマンドを入力してみましょう。 ::
 
   > asdk
