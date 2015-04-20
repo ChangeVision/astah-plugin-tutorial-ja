@@ -10,7 +10,7 @@ astah*のプラグインの開発環境を構築しましょう
 
  * 環境変数「ASDK_HOME」を追加し、展開したフォルダを指定する。 ::
 
-     例: set ASDK_HOME=C:\dev\astah-plugin-SDK-1.0
+     例: set ASDK_HOME="C:\dev\astah-plugin-SDK-1.0"
 
  * 環境変数「PATH」にastah* Plug-in SDKの実行ファイルがある
    「%ASDK_HOME%\\bin」フォルダを追加する。
@@ -22,7 +22,7 @@ astah*のプラグインの開発環境を構築しましょう
 
  * 環境変数「JAVA_HOME」を追加し、展開したフォルダを指定する。 ::
 
-     例: set JAVA_HOME=C:\Program Files (x86)\Java\jdk1.7.0_65
+     例: set JAVA_HOME="C:\Program Files (x86)\Java\jdk1.7.0_65"
 
 以上の作業が終了したら、次のコマンドを入力してみましょう。 ::
 
