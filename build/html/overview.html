@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>astah*のプラグイン機構の仕組み &#8212; astah* Plug-in 開発チュートリアル 1.2 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="astah*のプラグインの開発環境を構築しましょう" href="devenv.html" />
+    <link rel="prev" title="astah* Plug-in開発チュートリアル" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="devenv.html" title="astah*のプラグインの開発環境を構築しましょう"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="astah* Plug-in開発チュートリアル"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">astah* Plug-in 開発チュートリアル 1.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">astah*のプラグイン機構の仕組み</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="astah">
+<h1>astah*のプラグイン機構の仕組み<a class="headerlink" href="#astah" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="_images/archtecture.png"><img alt="astah*プラグインアーキテクチャ" src="_images/archtecture.png" style="width: 600px;" /></a>
+</div>
+<p>astah*のプラグイン機構は起動時に、インストールフォルダ配下のpluginsフォルダにあるプラグインファイルをロードします。プラグインはOSGi <a class="footnote-reference brackets" href="#osgi" id="id1">1</a> Bundle形式のjarファイルである必要があります｡</p>
+<p>astah*プラグインの開発中､プラグインフォルダ配下にコピーしなくても良いように、また、Bundleへのパッケージングを自動的に行うなど、開発を楽にする開発環境を用意しています。それではastah*のプラグイン開発環境を構築してみましょう。</p>
+<p>このチュートリアルの作成例はexamples/tutorialsampleの下に同梱されています。もしうまく動かない場合は参考にしてください。</p>
+<p class="rubric">Footnotes</p>
+<dl class="footnote brackets">
+<dt class="label" id="osgi"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p><a class="reference external" href="http://www.osgi.org/">http://www.osgi.org/</a></p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">astah* Plug-in開発チュートリアル</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="devenv.html"
+                        title="next chapter">astah*のプラグインの開発環境を構築しましょう</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/overview.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="devenv.html" title="astah*のプラグインの開発環境を構築しましょう"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="astah* Plug-in開発チュートリアル"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">astah* Plug-in 開発チュートリアル 1.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">astah*のプラグイン機構の仕組み</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014, Change Vision,inc.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
+    </div>
+  </body>
+</html>
