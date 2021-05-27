@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>プラグインをリリースしましょう &#8212; astah* Plug-in 開発チュートリアル 1.2 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="参考サイト" href="apilist.html" />
+    <link rel="prev" title="作成したプラグインをastah*にインストールしてみましょう" href="installplugin.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="apilist.html" title="参考サイト"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="installplugin.html" title="作成したプラグインをastah*にインストールしてみましょう"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">astah* Plug-in 開発チュートリアル 1.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">プラグインをリリースしましょう</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="id1">
+<h1>プラグインをリリースしましょう<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>プラグインのリリース前に、開発したastah*のバージョンと、動作対象エディションを設定しておきましょう。設定を行うと、対象にしないastah*環境にインストールされても、プラグインを起動しません。リリースする前に、開発したastah*のバージョンと動作対象エディションを設定しておきましょう。この設定があると、対象としないastah*環境にインストールされた場合、プラグインが起動されません。</p>
+<p>pom.xmlを開き、&lt;properties&gt;タグのastah-versionとastah-editionに指定します。</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;properties&gt;</span>
+  <span class="nt">&lt;bundle.symbolicName&gt;</span>com.change_vision.astah.sample<span class="nt">&lt;/bundle.symbolicName&gt;</span>
+  <span class="nt">&lt;bundle.namespace&gt;</span>com.change_vision.astah<span class="nt">&lt;/bundle.namespace&gt;</span>
+  <span class="nt">&lt;plugin.install&gt;</span>true<span class="nt">&lt;/plugin.install&gt;</span>
+  <span class="nt">&lt;astah.version&gt;</span>6.6<span class="nt">&lt;/astah.version&gt;</span>
+  <span class="nt">&lt;astah.edition&gt;</span>all<span class="nt">&lt;/astah.edition&gt;</span>
+<span class="nt">&lt;/properties&gt;</span>
+</pre></div>
+</div>
+<p>astah.versionには開発に利用したastah*のバージョンを書きましょう。空欄にした場合は、全てのバージョンが動作対象となります。astah-editionに指定するキー名は、下記の表を参照してください。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Edition</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>全エディション対応</p></td>
+<td><p>空欄、またはallか、* (astah.versionは1.1にしてください)</p></td>
+</tr>
+<tr class="row-odd"><td><p>professional</p></td>
+<td><p>pro、またはprofessional</p></td>
+</tr>
+<tr class="row-even"><td><p>UML</p></td>
+<td><p>uml、またはUML</p></td>
+</tr>
+<tr class="row-odd"><td><p>SysML</p></td>
+<td><p>sysml</p></td>
+</tr>
+<tr class="row-even"><td><p>community</p></td>
+<td><p>com、またはCommunity</p></td>
+</tr>
+<tr class="row-odd"><td><p>think</p></td>
+<td><p>think</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="installplugin.html"
+                        title="previous chapter">作成したプラグインをastah*にインストールしてみましょう</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="apilist.html"
+                        title="next chapter">参考サイト</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/releaseplugin.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="apilist.html" title="参考サイト"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="installplugin.html" title="作成したプラグインをastah*にインストールしてみましょう"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">astah* Plug-in 開発チュートリアル 1.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">プラグインをリリースしましょう</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014, Change Vision,inc.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
+    </div>
+  </body>
+</html>
