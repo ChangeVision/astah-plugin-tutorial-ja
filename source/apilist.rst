@@ -7,14 +7,20 @@ astah* APIについて
 astah*のプラグインに関するAPIの情報は、
 astah* API利用ガイドおよびJavaDocを参照してください。
 
- * `astah* API利用ガイド <http://members.change-vision.com/javadoc/astah-api/latest/api/ja/doc/index.html>`_
- * `astah* API JavaDoc <http://members.change-vision.com/javadoc/astah-api/latest/api/ja/doc/javadoc/index.html>`_
+ * `astah* API利用ガイド <https://members.change-vision.com/javadoc/astah-api/latest/api/ja/doc/index.html>`_
+ * `astah* API JavaDoc <https://members.change-vision.com/javadoc/astah-api/latest/api/ja/doc/javadoc/index.html>`_
  
 astah* SysMLのプラグインに関するAPIの情報は、
 astah* SysML API利用ガイドおよびJavaDocを参照してください。
 
- * `astah* SysML API利用ガイド <http://astah.change-vision.com/ja/feature/astah-sysml-api-user-guide.html>`_
- * `astah* SysML API JavaDoc <http://members.change-vision.com/javadoc/astah-sysml-api/1.1/api/ja/doc/javadoc/index.html>`_
+ * `astah* SysML API利用ガイド <https://astah.change-vision.com/ja/tutorial/api-sysml.html>`_
+ * `astah* SysML API JavaDoc <https://members.change-vision.com/javadoc/astah-sysml-api/1.1/api/ja/doc/javadoc/index.html>`_
+ 
+astah* System Safetyのプラグインに関するAPIの情報は、
+astah* System Safety利用ガイドおよびJavaDocを参照してください。
+
+ * `astah* System Safety API利用ガイド <https://members.change-vision.com/javadoc/asy-api/latest/ja/doc/index.html>`_
+ * `astah* System Safety API JavaDoc <https://members.change-vision.com/javadoc/asy-api/latest/ja/doc/javadoc/index.html>`_
 
 Mavenについて
 -------------------------------------------------------

@@ -2,7 +2,7 @@
 astah*のプラグインの開発環境を構築しましょう
 =======================================================
 
-`astah*のプラグイン開発環境として、astah* Plug-in SDKを配布しています。 <http://astah.change-vision.com/files/plugin/astah-plugin-sdk-latest.zip>`_ このSDKはMaven 3をベースにカスタマイズしたものです。
+astah*のプラグイン開発環境として、`astah* professional用 <https://astah.change-vision.com/files/plugin/astah-plugin-sdk-latest.zip>`_ と `astah* System Safety用 <https://astah.change-vision.com/files/plugin/safety-plugin-sdk-latest.zip>`_ のastah* Plug-in SDKを配布しています。このSDKはMaven 3をベースにカスタマイズしたものです。
 
 ここではastah*のプラグインの開発環境を構築しましょう。 `なお、astah*プラグイン開発環境のシステム要件は、astah*に準じます。 <http://astah.change-vision.com/ja/product/astah-requirement.html>`_
 
