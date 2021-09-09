@@ -16,9 +16,9 @@ astah*のプラグイン機構は、astah*に自作の機能を追加し、機�
 ==================== ===================================
 ソフトウェア          バージョン
 ==================== ===================================
-OS                    Windows10,Ubuntu Linux 11.10(astah* Safety System非サポート)
+OS                    Windows10,Ubuntu Linux 11.10(astah* System Safety非サポート)
 Java                  AdoptOpenJDK 8
-astah*                6.8(Professional, UML, Community),1.1(SysML),Safety System(6.0)
+astah*                6.8(Professional, UML, Community),1.1(SysML),System Safety(6.0)
 Eclipse               3.7.1
 IntelliJ IDEA         11.1
 ==================== ===================================
