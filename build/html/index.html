@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>astah* Plug-in開発チュートリアル &#8212; astah* Plug-in 開発チュートリアル 1.2 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="astah*のプラグイン機構の仕組み" href="overview.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="overview.html" title="astah*のプラグイン機構の仕組み"
+             accesskey="N">next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">astah* Plug-in 開発チュートリアル 1.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">astah* Plug-in開発チュートリアル</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="astah-plug-in">
+<h1>astah* Plug-in開発チュートリアル<a class="headerlink" href="#astah-plug-in" title="Permalink to this headline">¶</a></h1>
+<p>astah*のプラグイン機構は、astah*に自作の機能を追加し、機能拡張を実現する仕組みです。astah*のプラグインを作成することで、メニューや拡張ビューなど、astah*のGUIに独自のコンポーネントを追加できます。本チュートリアルでは、サンプルを中心にastah*プラグインの作り方を紹介します。</p>
+<div class="section" id="id1">
+<h2>チュートリアルで動作確認したバージョン<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>本チュートリアルでは、次のバージョンで動作を確認しています。他のバージョンでも開発できますが、チュートリアル記載の内容とは設定や画面が異なる場合があります。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 76%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ソフトウェア</p></th>
+<th class="head"><p>バージョン</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>OS</p></td>
+<td><p>Windows10,Ubuntu Linux 11.10(astah* System Safety非サポート)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Java</p></td>
+<td><p>AdoptOpenJDK 8</p></td>
+</tr>
+<tr class="row-even"><td><p>astah*</p></td>
+<td><p>6.8(Professional, UML, Community),1.1(SysML),System Safety(6.0)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Eclipse</p></td>
+<td><p>3.7.1</p></td>
+</tr>
+<tr class="row-even"><td><p>IntelliJ IDEA</p></td>
+<td><p>11.1</p></td>
+</tr>
+</tbody>
+</table>
+<p>目次:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">astah*のプラグイン機構の仕組み</a></li>
+<li class="toctree-l1"><a class="reference internal" href="devenv.html">astah*のプラグインの開発環境を構築しましょう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="helloworld.html">Hello Worldプラグインを作ってみましょう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">クラスの総数を表示するプラグインを作ってみましょう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extraview.html">拡張タブビューを作ってみましょう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installplugin.html">作成したプラグインをastah*にインストールしてみましょう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releaseplugin.html">プラグインをリリースしましょう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apilist.html">参考サイト</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendixA.html">astah* メニューID一覧</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendixB.html">astah* Plug-in SDK コマンド一覧</a></li>
+<li class="toctree-l1"><a class="reference internal" href="snippets.html">astah* Plug-in 用スニペット集</a></li>
+</ul>
+</div>
+<p class="rubric">Footnotes</p>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">astah* Plug-in開発チュートリアル</a><ul>
+<li><a class="reference internal" href="#id1">チュートリアルで動作確認したバージョン</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Next topic</h4>
+  <p class="topless"><a href="overview.html"
+                        title="next chapter">astah*のプラグイン機構の仕組み</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="overview.html" title="astah*のプラグイン機構の仕組み"
+             >next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">astah* Plug-in 開発チュートリアル 1.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">astah* Plug-in開発チュートリアル</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014, Change Vision,inc.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
+    </div>
+  </body>
+</html>
