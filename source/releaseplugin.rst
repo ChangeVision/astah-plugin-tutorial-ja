@@ -24,7 +24,7 @@ Edition             Value
 professional       pro、またはprofessional
 UML                uml、またはUML
 System Safety      safety またはSystemSafety (互換バージョンを対象とする場合はpro/UML/SysML向けも動作します)
-SysML              sysml
+SysML              sys、または sysml
 community          com、またはCommunity
 think              think
 ================== ===========================================================================================

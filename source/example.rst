@@ -40,6 +40,7 @@ astah*のモデル情報を取得するために、astah* APIを活用してみ�
 最後に､plugin.propertiesに追加したメニューのラベルを追加します｡ ::
 
  count_classes=Count classes(C)
+ sample_menu=SampleMenu
 
 これで、クラスの数をカウントした結果を表示できます。
 
